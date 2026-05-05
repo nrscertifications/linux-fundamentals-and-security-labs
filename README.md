@@ -14,4 +14,4 @@ This repository documents my progress through [OverTheWire's Bandit] (https://ov
 - **Environment:** Bash Terminal / SSH
 - **Primary Tools:** 'grep', 'find', 'openssl', 'nmap', 'netcad', 'git', 'cron'
 
-## Progress && Technical Write-Up
+## Progress & Technical Write-Up
