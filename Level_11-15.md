@@ -35,7 +35,7 @@ Command Used:
 #Localhost
 `chmod 600 sshkey.private` 
 `ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org`
-Password found: `The SSH Key within sshkey.private -> it needed to be saved on localhost...`
+Password found: `The SSH key within sshkey.private -> saved on localhost...`
 
 Level 14 -> 15
 Command Used: ` `
