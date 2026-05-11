@@ -29,8 +29,13 @@ Commands Used:
 Password found: `FO5d...`
 
 Level 13 -> 14
-Command Used: ` `
-Password found: ` `
+Command Used: 
+`file sshkey.private`
+`cat sshkey.private`
+#Localhost
+`chmod 600 sshkey.private` 
+`ssh -i sshkey.private -p 2220 bandit14@bandit.labs.overthewire.org`
+Password found: `The SSH Key within sshkey.private -> it needed to be saved on localhost...`
 
 Level 14 -> 15
 Command Used: ` `
