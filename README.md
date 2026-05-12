@@ -43,7 +43,6 @@ The goal of this repository is to show practical Linux learning, troubleshooting
 - `tar`
 - `gzip`
 - `bzip2`
-- `nc`
 
 ## Progress
 
