@@ -1,17 +1,56 @@
-# OverTheWire-Bandit
-Comprehensive documentation and technical write-ups for the OverTheWire Bandit wargame, focusing on Linux CLI mastery, SSH protocols, and foundational cybersecurity principles.
+# OverTheWire Bandit Linux Practice
 
-# OverTheWire: Bandit Wargames
-This repository documents my progress through [OverTheWire's Bandit] (https://overthewire.org/wargames/bandit/), a series of challenges designed to teach Linux fundamentals and security concepts.
+This repository documents my Linux command-line practice using OverTheWire Bandit.
 
-## Portfolio Objectives
-- **Linux Engineering:** Proficiency in navigating complex file systems and system permissions.
-- **Cybersecurity Fundamentals:** Understanding encryption, network protocols, and data obfuscation.
-- **Documentation:** Providing clear, technical write-ups of problem-solving methodologies.
+The goal of this repository is to show practical Linux learning, troubleshooting steps, command usage, and technical documentation. It does not include live passwords, private keys, or restricted challenge answers.
 
-## Tech Stack
-- **OS:** Windows Subsystem for Linux (WSL - Ubuntu), Hyper-V Manager - Ubuntu 24.04 VM
-- **Environment:** Bash Terminal / SSH
-- **Primary Tools:** 'grep', 'find', 'openssl', 'nmap', 'netcad', 'git', 'cron'
+## Skills Practiced
 
-## Progress & Technical Write-Up
+- SSH access and remote terminal use
+- Linux file navigation
+- Hidden files and special filenames
+- File permissions
+- Searching files with commands like `find`, `grep`, and `strings`
+- Encoding and decoding basics
+- Compression and archive handling
+- Reading command documentation
+- Writing clear technical notes
+
+## Environment
+
+- Windows Subsystem for Linux: Ubuntu
+- Hyper-V Manager: Ubuntu VM
+- Ubuntu virtual machine practice
+- Bash terminal
+- SSH
+- Git and GitHub
+
+## Tools Used
+
+- `ssh`
+- `ls`
+- `cd`
+- `cat`
+- `file`
+- `find`
+- `grep`
+- `sort`
+- `uniq`
+- `strings`
+- `base64`
+- `tr`
+- `xxd`
+- `tar`
+- `gzip`
+- `bzip2`
+- `nc`
+
+## Progress
+
+- Levels 0–5 documented
+- Levels 6–10 documented
+- Levels 11–15 in progress
+
+## Important Note
+
+This repository is for learning documentation only. Passwords, private keys, and sensitive challenge answers are intentionally redacted.
