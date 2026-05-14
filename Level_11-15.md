@@ -65,10 +65,10 @@ file data6
 
 mv data6 data6.tar
 tar -xf data6.tar
-file data8.bin
+file data7.bin
 
-mv data8.bin data8.gz
-gunzip data8.gz
+mv data7.bin data7.gz
+gunzip data7.gz
 file data8
 
 cat data8
