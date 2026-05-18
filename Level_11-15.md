@@ -115,4 +115,35 @@ Private key contents and passwords are not included.
 
 ## Level 14 -> 15
 
-currently in progress...
+### Commands Used
+
+```bash
+nc localhost 30000 < /etc/bandit_pass/bandit14
+```
+
+### What I did 
+
+I used `nc` to connect to a local network service running on `localhost` at port `30000`.
+
+Instead of manually typing the current level password, I used input redirection with `<` to send the contents of `/etc/bandit_pass/bandit14` directly into the `nc` command.
+
+The service accepted the current level password and returned the password for the next level.
+
+### Concept Practiced 
+
+This level practiced using `netcat` to communicate with a service listening on a specific port.
+
+It also reinforced standard input redirection, where the contents of a file can be passed into a command as input. In this case, the password file was used as input for the network connection.
+
+This is useful for understanding basic command-line networking, local services, ports, and how Linux commands can pass data between files and programs.
+
+### Notes
+
+Passwords are not included. The contents of `/etc/bandit_pass/bandit14` are not shown.
+
+---
+
+## Level 15 -> 16
+
+Currently progressing...
+
