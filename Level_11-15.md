@@ -145,5 +145,20 @@ Passwords are not included. The contents of `/etc/bandit_pass/bandit14` are not 
 
 ## Level 15 -> 16
 
-Currently progressing...
+### Commands Used
 
+```bash
+cat /etc/bandit_pass/bandit15 | openssl s_client -connect 127.0.0.1:30001 -quiet -ign_eof
+```
+
+### What I Did
+
+I read the current level password from `/etc/bandit_pass/bandit15` and piped it into `openssl s_client`. This submitted the password to the local service running on port `30001` using an SSL/TLS connection.
+
+### Concept Practiced
+
+This level reinforced the difference between plain network communication and encrypted network communication. Instead of using `nc` like the previous level, I used `openssl s_client` to connect to a local service over SSL/TLS.
+
+### Notes
+
+Password not included. If the connection does not close cleanly or shows connection-related messages, the `-ign_eof` option can be used with `openssl s_client`.
