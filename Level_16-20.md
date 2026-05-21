@@ -31,3 +31,9 @@ Port `31518` also used SSL, but it was only an `ssl/echo` service. Port `31790` 
 The RSA private key should be saved locally so it can be reused later. Private key files should use restrictive permissions such as `chmod 600`, because OpenSSH rejects private keys that are too open.
 
 Passwords and private key contents are not included in this repository.
+
+## Level 17 -> 18
+
+### Commands Used
+
+```bash
