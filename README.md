@@ -1,43 +1,27 @@
-# OverTheWire Bandit Linux Practice
+# Linux Systems Administration & Security Labs
 
-This repository documents my progress through OverTheWire Bandit, a Linux command-line wargame focused on practical Linux fundamentals, SSH usage, file navigation, permissions, searching, encoding, archives, and command-line problem solving.
+A professional technical reference repository documenting command-line proficiency, Linux system administration, and infrastructure security fundamentals. This knowledge base serves as an operational guide for shell-based troubleshooting and secure systems management.
 
-The purpose of this repository is to demonstrate hands-on Linux practice, technical documentation, and troubleshooting-style thinking for entry-level IT support and technical support roles.
+## Technical Domains
+This repository leverages GNU/Linux environments to demonstrate competency in the following operational areas:
 
-## Skills Practiced
+*   **System Navigation & Shell Ops:** Advanced navigation, process control, and environment management within Bash/Zsh.
+*   **Permissions & Security:** Implementation of standard Linux permission models (`chmod`, `chown`) and secure directory access control.
+*   **Data Analysis & Log Review:** Execution of text processing tools (`grep`, `awk`, `sed`, `sort`, `uniq`) to parse command output and system logs for rapid incident remediation.
+*   **Infrastructure Access:** Configuration of secure shell (`SSH`) access, identity-based authentication, and secure remote connectivity protocols.
+*   **Operational Security:** Analysis of file integrity, binary inspection, and secure data handling procedures.
 
-- Linux command-line navigation
-- SSH access
-- File and directory management
-- Hidden files and special filenames
-- File permissions
-- Searching with `find` and `grep`
-- Sorting and filtering command output
-- Encoding and decoding
-- Archive extraction
-- Basic scripting and command-line problem solving
-- Clear technical documentation
+## Operational Environment
+*   **Platform:** Windows Subsystem for Linux (WSL2) / Ubuntu
+*   **Shell:** Bash
+*   **Toolchain:** Git, SSH, GNU Coreutils
 
-## Environment
+## Documentation Approach
+This repository is maintained to standardize Linux-based troubleshooting workflows. Each entry focuses on:
 
-- Windows Subsystem for Linux
-- Ubuntu
-- Bash
-- SSH
-- Git and GitHub
+1.  **Analytical Troubleshooting:** The methodology and reasoning behind command selection.
+2.  **Repeatability:** Documenting procedures in a way that allows for consistent execution during system support tasks.
+3.  **Knowledge Retention:** Maintaining a searchable baseline for Linux operations relevant to IT Support, Service Desk, and Infrastructure roles.
 
-## Write-Ups
-
-| Level Range | Topics Practiced |
-|---|---|
-| Level 0-5 | SSH, file reading, special filenames, hidden files, file types, `find` |
-| Level 6-10 | File searching, ownership, `grep`, `sort`, `uniq`, `strings`, Base64 |
-| Level 11-15 | ROT13, hex dumps, compression, archives, SSH private key usage |
-
-## Important Note
-
-Passwords and sensitive challenge solutions are not included in this repository. The write-ups focus on the commands used, the reasoning process, and the Linux concepts practiced.
-
-## Career Relevance
-
-These labs support entry-level IT support, help desk, service desk, technical support, Linux support, and cloud support-adjacent roles by showing practical command-line troubleshooting and documentation skills.
+## Security Policy
+*This repository contains sanitized command syntax and conceptual workflows only. No sensitive credentials, authentication keys, or production environment data are utilized or stored.*
