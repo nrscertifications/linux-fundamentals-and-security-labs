@@ -1,132 +1,110 @@
-# OverTheWire Bandit: Levels 0-5
+# Shell Navigation & File Handling
 
-This file documents my work through the first Bandit levels, focusing on basic Linux command-line navigation, reading files, handling special filenames, hidden files, file types, and file searching.
+This document summarizes Linux command-line exercises completed through the OverTheWire Bandit training environment. The focus of these exercises was file system navigation, file identification, hidden files, special filename handling, and attribute-based file searches.
 
-Passwords are intentionally not included.
+## Reading File Contents
 
----
+### Objective
 
-## Level 0 -> 1
+Read the contents of a text file from the command line.
 
-### Commands Used
+### Commands
 
 ```bash
 cat readme
 ```
 
-### What I Did
+### Key Concept
 
-I used `cat readme` to display the contents of the `readme` file and retrieve the password for the next level.
-
-### Concept Practiced
-
-This level reinforced basic Linux file reading using the `cat` command.
-
-### Notes
-
-Password not included.
+The `cat` command displays file contents directly in the terminal and is commonly used for quick file inspection and verification.
 
 ---
 
-## Level 1 -> 2
+## Handling Special Filenames
 
-### Commands Used
+### Objective
+
+Access files containing shell-reserved characters that may be interpreted as command options.
+
+### Commands
 
 ```bash
 ls
 cat ./-
 ```
 
-### What I Did
+### Key Concept
 
-I used `ls` to list the files in the current directory. The file was named `-`, so I used `cat ./-` to read it safely.
-
-### Concept Practiced
-
-This level reinforced how to work with special filenames in Linux. Using `./-` tells the shell to treat `-` as a file in the current directory instead of interpreting it as a command option.
-
-### Notes
-
-Password not included.
+The filename `-` can be interpreted as a command option by the shell. Using `./` explicitly identifies the object as a file in the current directory.
 
 ---
 
-## Level 2 -> 3
+## Working with Filenames Containing Spaces
 
-### Commands Used
+### Objective
+
+Access files that contain spaces and special characters in the filename.
+
+### Commands
 
 ```bash
 ls
 cat "./--spaces in this filename--"
 ```
 
-### What I Did
+### Key Concept
 
-I used `ls` to view the file in the current directory. Because the filename contained spaces and special characters, I wrapped the filename in quotes and used `cat` to read it.
-
-### Concept Practiced
-
-This level reinforced how to handle filenames that contain spaces or special characters by using quotation marks.
-
-### Notes
-
-Password not included.
+Quotation marks preserve the filename exactly as written and prevent the shell from treating spaces as argument separators.
 
 ---
 
-## Level 3 -> 4
+## Identifying Hidden Files
 
-### Commands Used
+### Objective
+
+Locate and access hidden files within a directory.
+
+### Commands
 
 ```bash
-ls
 cd inhere
 ls -a
 cat ./.hidden
 ```
 
-### What I Did
+### Key Concept
 
-I listed the files in the current directory, moved into the `inhere` directory, and used `ls -a` to show hidden files. I then used `cat` to read the hidden file.
-
-### Concept Practiced
-
-This level reinforced Linux hidden files and directory navigation. Files that begin with a dot are hidden from normal `ls` output and require `ls -a` to display.
-
-### Notes
-
-Password not included.
+Files beginning with a period (`.`) are hidden from standard directory listings. The `-a` option displays all files, including hidden objects.
 
 ---
 
-## Level 4 -> 5
+## Verifying File Types Before Reading
 
-### Commands Used
+### Objective
+
+Identify human-readable files before attempting to open them.
+
+### Commands
 
 ```bash
 cd inhere
-ls
 file ./*
 cat ./-file07
 ```
 
-### What I Did
+### Key Concept
 
-I moved into the `inhere` directory and used `file ./*` to check the file types of each file. After identifying the human-readable file, I used `cat` to read it.
-
-### Concept Practiced
-
-This level reinforced the use of the `file` command to identify file types before opening them. It also continued practice with special filenames that begin with `-`.
-
-### Notes
-
-Password not included.
+The `file` utility determines the type of a file based on its contents rather than its name. This helps identify text files, binary files, archives, and other file formats before processing them.
 
 ---
 
-## Level 5 -> 6
+## Searching for Files by Attributes
 
-### Commands Used
+### Objective
+
+Locate files based on size and permission characteristics.
+
+### Commands
 
 ```bash
 cd inhere
@@ -134,14 +112,12 @@ find . -type f -size 1033c ! -executable
 cat ./maybehere07/.file2
 ```
 
-### What I Did
+### Key Concept
 
-I moved into the `inhere` directory and used `find` to search for a regular file that was exactly 1033 bytes and not executable. After identifying the matching file, I used `cat` to read it.
+The `find` utility enables targeted searches using file attributes.
 
-### Concept Practiced
+* `-type f` searches for regular files.
+* `-size 1033c` matches files that are exactly 1033 bytes.
+* `! -executable` excludes executable files.
 
-This level reinforced searching for files by size and permissions using the `find` command.
-
-### Notes
-
-Password not included.
+This type of search is commonly used during troubleshooting, system administration, and file system audits.
