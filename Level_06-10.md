@@ -1,116 +1,111 @@
-# OverTheWire Bandit: Levels 6-10
+# File Searching & Data Processing
 
-This file documents my work through Bandit levels focused on file searching, ownership, groups, text searching, sorting, filtering, printable strings, and Base64 decoding.
+This document summarizes Linux command-line exercises completed through the OverTheWire Bandit training environment. The focus of these exercises was file searching, ownership filtering, text search, sorting, duplicate detection, readable string extraction, and Base64 decoding.
 
-Passwords are intentionally not included.
+## Searching Files by Ownership and Size
 
----
+### Objective
 
-## Level 6 -> 7
+Locate a file based on owner, group, file type, and exact size.
 
-### Commands Used
+### Commands
 
 ```bash
 find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
 cat /path/to/matching/file
 ```
 
-### What I Did
+### Operational Note
 
-I used `find` to search the filesystem for a regular file owned by user `bandit7`, owned by group `bandit6`, and exactly 33 bytes in size. I redirected permission errors to `/dev/null` so the useful result was easier to see.
+The `find` utility can search across the filesystem using multiple file attributes.
 
-### Concept Practiced
+* `-type f` searches for regular files.
+* `-user bandit7` filters by file owner.
+* `-group bandit6` filters by group ownership.
+* `-size 33c` matches files that are exactly 33 bytes.
+* `2>/dev/null` suppresses permission-denied errors from standard error output.
 
-This level reinforced advanced file searching with `find`, including searching by owner, group, file size, and suppressing permission-denied errors.
-
-### Notes
-
-Password not included. Replace `/path/to/matching/file` with the matching path found from the `find` command.
+This workflow is useful for file system audits, troubleshooting, and locating files when only partial metadata is known.
 
 ---
 
-## Level 7 -> 8
+## Searching Text Within a File
 
-### Commands Used
+### Objective
+
+Find a specific line inside a text file using a keyword match.
+
+### Commands
 
 ```bash
 grep "millionth" data.txt
 ```
 
-### What I Did
+### Operational Note
 
-I used `grep` to search inside `data.txt` for the line containing the word `millionth`.
-
-### Concept Practiced
-
-This level reinforced searching text inside a file using `grep`.
-
-### Notes
-
-Password not included.
+The `grep` command searches text for matching patterns and returns the lines that contain those matches. It is commonly used for log review, configuration checks, and command-output filtering.
 
 ---
 
-## Level 8 -> 9
+## Sorting and Identifying Unique Data
 
-### Commands Used
+### Objective
+
+Find a line that appears only once within a file containing repeated entries.
+
+### Commands
 
 ```bash
 sort data.txt | uniq -u
 ```
 
-### What I Did
+### Operational Note
 
-I sorted the contents of `data.txt` and used `uniq -u` to display the line that appeared only once.
+Pipes allow multiple Linux commands to work together in a single workflow.
 
-### Concept Practiced
+* `sort data.txt` organizes the file contents so duplicate lines are grouped together.
+* `uniq -u` displays only lines that appear once.
 
-This level reinforced using pipes to combine commands. It also practiced sorting data before using `uniq`, since `uniq` works best when duplicate lines are grouped together.
-
-### Notes
-
-Password not included.
+This workflow is useful when reviewing logs, lists, exports, or repeated data where unique entries need to be identified.
 
 ---
 
-## Level 9 -> 10
+## Extracting Readable Strings from a File
 
-### Commands Used
+### Objective
+
+Identify readable text embedded within a file and filter for a specific pattern.
+
+### Commands
 
 ```bash
 strings data.txt | grep -E "={2,}"
 ```
 
-### What I Did
+### Operational Note
 
-I used `strings` to extract readable text from the file and piped the output into `grep` to search for lines containing repeated equal signs.
+The `strings` command extracts human-readable text from files that may contain non-readable or binary content.
 
-### Concept Practiced
+The output is then filtered with `grep -E`, which enables extended regular expressions. The pattern `={2,}` searches for two or more equal signs in sequence.
 
-This level reinforced extracting human-readable text from a file and filtering command output using regular expressions.
-
-### Notes
-
-Password not included.
+This workflow is useful for inspecting unknown files, reviewing binary-like data, and extracting readable indicators without opening the file directly.
 
 ---
 
-## Level 10 -> 11
+## Decoding Base64-Encoded Text
 
-### Commands Used
+### Objective
+
+Decode Base64-encoded content from the command line.
+
+### Commands
 
 ```bash
 base64 -d data.txt
 ```
 
-### What I Did
+### Operational Note
 
-I used `base64 -d` to decode the Base64-encoded contents of `data.txt`.
+Base64 is an encoding format used to represent data as printable text. The `base64 -d` command decodes Base64 content back into readable output.
 
-### Concept Practiced
-
-This level reinforced recognizing and decoding Base64-encoded text from the Linux command line.
-
-### Notes
-
-Password not included.
+This workflow is useful when reviewing encoded configuration data, logs, tokens, or text-based encoded values in a controlled environment.
