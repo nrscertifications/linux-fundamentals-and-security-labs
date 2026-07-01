@@ -1,27 +1,64 @@
-# Linux Systems Administration & Security Labs
+# Linux Fundamentals & Security Labs
 
-A professional technical reference repository documenting command-line proficiency, Linux system administration, and infrastructure security fundamentals. This knowledge base serves as an operational guide for shell-based troubleshooting and secure systems management.
+## Overview
+
+This repository documents Linux command-line practice focused on shell navigation, file handling, permissions, SSH, text processing, and foundational security concepts.
+
+The work is based on Ubuntu/WSL practice and OverTheWire Bandit exercises. The goal is to show practical command-line familiarity for IT Support, Service Desk, Technical Support, junior systems support, and security-adjacent roles.
+
+---
 
 ## Technical Domains
-This repository leverages GNU/Linux environments to demonstrate competency in the following operational areas:
 
-*   **System Navigation & Shell Ops:** Advanced navigation, process control, and environment management within Bash/Zsh.
-*   **Permissions & Security:** Implementation of standard Linux permission models (`chmod`, `chown`) and secure directory access control.
-*   **Data Analysis & Log Review:** Execution of text processing tools (`grep`, `awk`, `sed`, `sort`, `uniq`) to parse command output and system logs for rapid incident remediation.
-*   **Infrastructure Access:** Configuration of secure shell (`SSH`) access, identity-based authentication, and secure remote connectivity protocols.
-*   **Operational Security:** Analysis of file integrity, binary inspection, and secure data handling procedures.
+* **Shell Navigation:** Directory movement, file listing, hidden files, relative/absolute paths, and command discovery
+* **File Handling:** Reading files, searching file contents, locating files, working with archives, and handling encoded data
+* **Permissions & Access:** Linux permission concepts, executable files, ownership concepts, and secure file access
+* **SSH & Remote Access:** Secure shell login, host connection basics, and remote command-line workflow
+* **Text Processing:** `grep`, `find`, `sort`, `uniq`, `strings`, `base64`, and related command-line utilities
+* **Security Fundamentals:** Safe handling of credentials in lab environments, file inspection, and basic privilege-awareness concepts
+* **Documentation:** Markdown notes, repeatable command examples, and Git/GitHub repository organization
+
+---
 
 ## Operational Environment
-*   **Platform:** Windows Subsystem for Linux (WSL2) / Ubuntu
-*   **Shell:** Bash
-*   **Toolchain:** Git, SSH, GNU Coreutils
+
+* **Platform:** Windows Subsystem for Linux / Ubuntu
+* **Shell:** Bash
+* **Toolchain:** Git, SSH, GNU Coreutils, standard Linux command-line utilities
+* **Lab Source:** OverTheWire Bandit command-line exercises
+
+---
 
 ## Documentation Approach
-This repository is maintained to standardize Linux-based troubleshooting workflows. Each entry focuses on:
 
-1.  **Analytical Troubleshooting:** The methodology and reasoning behind command selection.
-2.  **Repeatability:** Documenting procedures in a way that allows for consistent execution during system support tasks.
-3.  **Knowledge Retention:** Maintaining a searchable baseline for Linux operations relevant to IT Support, Service Desk, and Infrastructure roles.
+Each note focuses on:
+
+1. **Command Purpose:** What the command is used for.
+2. **Support Context:** How the concept applies to troubleshooting or systems support.
+3. **Repeatability:** How the workflow can be reused in similar technical scenarios.
+4. **Security Awareness:** What should be handled carefully, especially credentials, permissions, and file access.
+
+---
+
+## Repository Contents
+
+* [Shell Navigation & File Handling](01_shell_navigation_and_file_handling.md)
+* [File Searching & Data Processing](02_file_searching_and_data_processing.md)
+* [Security & Networking Operations](03_security_and_networking_operations.md)
+
+---
+
+## Core Competencies Demonstrated
+
+* Linux shell navigation and file handling.
+* Used SSH to access remote lab environments.
+* Worked with permissions, hidden files, encoded data, and file inspection commands.
+* Used command-line tools to search, filter, and process text output.
+* Documented Linux workflows in a way that supports troubleshooting and knowledge retention.
+* Maintained the work in GitHub as part of a technical support portfolio.
+
+---
 
 ## Security Policy
-*This repository contains sanitized command syntax and conceptual workflows only. No sensitive credentials, authentication keys, or production environment data are utilized or stored.*
+
+This repository contains lab notes and sanitized command examples only. It does not contain production credentials, private keys, customer data, or live business records.
